@@ -1,0 +1,37 @@
+<script>
+	import {
+		Router,
+		Link,
+		Route,
+	} from "svelte-navigator";
+	import FrontPage from './pages/FrontPage.svelte'
+	import About from './pages/About.svelte'
+	import VejlederPage from './pages/VejlederPage.svelte'
+</script>
+<Router>
+	<!-- Navbar -->
+	<div id="navDiv">
+		<nav>
+			<ul>
+				<li><Link to="/">Frontpage</Link></li>
+				<li><Link to="/about">About</Link></li>
+				<li><Link to="vejledere">Vejledere</Link></li>
+
+			</ul>
+		</nav>
+	</div>
+
+	<Route path="/" primary={false}>
+		<FrontPage/>
+	</Route>
+	<Route path="/about">
+		<About/>
+	</Route>
+	<Route path="vejledere">
+		<VejlederPage/>
+	</Route>
+</Router>
+
+<style>
+	
+</style>
