@@ -7,6 +7,8 @@
 	import FrontPage from './pages/FrontPage.svelte'
 	import About from './pages/About.svelte'
 	import VejlederPage from './pages/VejlederPage.svelte'
+	import ChooseProgrammePage from "./pages/ChooseProgrammePage.svelte";
+	import ProgrammePage from "./pages/ProgrammePage.svelte";
 </script>
 <Router>
 	<!-- Navbar -->
@@ -30,8 +32,12 @@
 	<Route path="vejledere">
 		<VejlederPage/>
 	</Route>
+	<Route path="uddannelse">
+		<ChooseProgrammePage/>
+	</Route>
+	<Route path="uddannelse/:navn">
+		<ProgrammePage/>
+	</Route>
 </Router>
 
-<style>
-	
-</style>
+<style></style>
