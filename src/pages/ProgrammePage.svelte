@@ -8,7 +8,7 @@
   const changeToWhite = programme.colorName == "sort" ? true : false;
 </script>
 
-<!-- blå, grøn, orange, pink, gul, rød   -->
+<!-- blå, grøn, orange, pink, gul, rød skal skiftes   -->
 
 <body>
   <div class="wrapper">
