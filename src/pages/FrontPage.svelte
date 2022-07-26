@@ -32,11 +32,12 @@
     padding: 20px;
     width: 300px;
     text-align: center;
-    -webkit-transition-duration: 0, 4s;
-    transition-duration: 1s;
+    -webkit-transition-duration: 0, 9s;
+    transition-duration: 0, 7s;
     text-decoration: none;
     overflow: hidden;
     color: black;
+    cursor: pointer;
   }
 
   #chooseProgrammeBtn:hover {
