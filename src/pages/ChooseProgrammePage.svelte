@@ -13,10 +13,10 @@
     .card-container {
         display: flex;
         flex-wrap: wrap;
-        width: 60vw;
+        width: 80vw;
         justify-content: space-evenly;
         row-gap: 30px;
-        column-gap: 10px;
+        column-gap: 5px;
     }
 
     .title {

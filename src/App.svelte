@@ -12,7 +12,7 @@
 </script>
 <Router>
 	<!-- Navbar -->
-	<div id="navDiv">
+	<!-- <div id="navDiv">
 		<nav>
 			<ul>
 				<li><Link to="/">Frontpage</Link></li>
@@ -21,7 +21,7 @@
 
 			</ul>
 		</nav>
-	</div>
+	</div> -->
 
 	<Route path="/" primary={false}>
 		<FrontPage/>
