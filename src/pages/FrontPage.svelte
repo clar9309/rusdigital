@@ -5,29 +5,66 @@
 <div class="loading_container">
   <p class="loading_1">ER DU KLAR?</p>
   <p class="loading_2">TIL RUS DIGITAL 2022</p>
-  <button id="chooseProgrammeBtn" class="button_loading" on:click={() => navigate('/uddannelse')}>SE RUS PROGRAMMET</button>
+  <button
+    style="text-align:center"
+    id="chooseProgrammeBtn"
+    class="button_loading"
+    on:click={() => navigate("/uddannelse")}>SE RUS PROGRAMMET</button
+  >
 </div>
 
 <style>
   .loading_container {
+    text-align: center;
     z-index: 100;
     width: 100%;
     height: 100%;
     margin: 0;
     margin-bottom: 0;
-    -webkit-animation: color-change-5x 1s linear infinite alternate both;
-    animation: color-change-5x 1s linear infinite alternate both;
-  }
-
-  .button_loading {
-    background-color: white;
-    padding: 2rem;
+    -webkit-animation: color-change-5x 3s linear infinite alternate both;
+    animation: color-change-5x 3s linear infinite alternate both;
   }
 
   #chooseProgrammeBtn {
-    color: purple;
+    position: relative;
+    background-color: white;
+    border: none;
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+    -webkit-transition-duration: 0, 4s;
+    transition-duration: 1s;
     text-decoration: none;
-    cursor: pointer;
+    overflow: hidden;
+    color: black;
+  }
+
+  #chooseProgrammeBtn:hover {
+    background: #fff;
+    box-shadow: 0px 2px 20px 10px #d0efff;
+    color: #000;
+    /* border: 2px solid white;
+    background: transparent; */
+  }
+
+  #chooseProgrammeBtn:after {
+    content: "";
+    background: #f1c40f;
+    display: block;
+    position: absolute;
+    padding-top: 300%;
+    padding-left: 350%;
+    margin-left: -20px !important;
+    margin-top: -120%;
+    opacity: 0;
+    transition: all 0.8s;
+  }
+
+  #chooseProgrammeBtn:active:after {
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: 0s;
   }
 
   @-webkit-keyframes color-change-5x {
