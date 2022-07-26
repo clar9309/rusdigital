@@ -1,25 +1,22 @@
 import { readable } from "svelte/store";
 import { Programme } from "../Entities/Programme";
 
-const poems = {
-    mmd: ``,
-    dat: ``,
-    beit: ``,
-    dig: ``,
-    itark: ``,
-    web: ``,
-    swd: ``,
-    itsec: ``,
-};
+/* export const poem = `
+Hey du der, pludselig stod du i bare tæer, du skal huske dine sko, fordi du skal til introuge, øhh nej, dage. 
+Husk en roulade, gerne med mælkechokolade eller marmelade, vi håber ikke du kommer til skade på din håndflade.
+Vi gerne se dig den 19 august, fredag kl 12 den, hvor vi vil indeholde dig på et hold, du skal også pakke noget, på en sej måde. Du skal medtage en kikkert til at snape, og en selfiestang, fordi vi er der dagen lang. Når man, og den roulade, som du måske kan få ned i din mave. Når ja, vi ses på ​​Guldbergsgade 29N. fordi det er her vi alle russer har hjem.
+
+Selvom vi skal hygge fredagen lang, så skal det ikke stoppe os for sejrssang. Det vil vi gøre lørdag den 20 august kl 12, hvor du skal dyste sammenhold eller et skjold, eller måske en støvle i guld, den er ihvertfald mega sej tror jeg. Der vil være en sandwich til alle, inden dystens ånd vil kalde. Til sidst på dagen vil der blive holdt en fest, hvor du er inviteret med som gæst.
+`; */
 
 const programmeArray = [
-    new Programme('Multimediedesign', '#A7C5E5', poems.mmd),
-    new Programme('Datamatiker', '#BCD6AC', poems.dat),
-    new Programme('Business Økonomi-IT', '#F3CDA2', poems.beit),
-    new Programme('Digital Konceptudvikling', '#8B7FBE', poems.dig),
-    new Programme('IT-Arkitektur', null, poems.itark),
-    new Programme('Webudvikling', '#B87F9E', poems.web),
-    new Programme('Softwareudvikling', '#FAD978', poems.swd),
-    new Programme('IT-Sikkerhed', '#DF9D9B', poems.itsec),
+    new Programme('Multimediedesign', '#394BF2', 'blå'),
+    new Programme('Datamatiker', '#81C259', 'grøn'),
+    new Programme('Business Økonomi-IT', '#F39C39', 'orange'),
+    new Programme('Digital Konceptudvikling', '#FFFFFF', 'hvid'),
+    new Programme('IT-Arkitektur', '#000000', 'sort'),
+    new Programme('Webudvikling', '#FF9FE4', 'lyserød'),
+    new Programme('Softwareudvikling', '#FFD954', 'gul'),
+    new Programme('IT-Sikkerhed', '#D95B4D', 'rød'),
 ];
 export const programmes = readable(programmeArray);

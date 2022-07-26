@@ -1,7 +1,7 @@
 export class Programme {
-    constructor(title, color, poem) {
+    constructor(title, color, colorName) {
         this.title = title;
         this.color = color;
-        this.poem = poem;
+        this.colorName = colorName;
     }
 }
