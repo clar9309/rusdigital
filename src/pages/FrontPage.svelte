@@ -1,7 +1,11 @@
+<script>
+  import { navigate } from "svelte-navigator";
+</script>
+
 <div class="loading_container">
   <p class="loading_1">ER DU KLAR?</p>
   <p class="loading_2">TIL RUS DIGITAL 2022</p>
-  <a class="button_loading" href="#">SE RUS PROGRAMMET</a>
+  <button id="chooseProgrammeBtn" class="button_loading" on:click={() => navigate('/uddannelse')}>SE RUS PROGRAMMET</button>
 </div>
 
 <style>
@@ -13,6 +17,17 @@
     margin-bottom: 0;
     -webkit-animation: color-change-5x 1s linear infinite alternate both;
     animation: color-change-5x 1s linear infinite alternate both;
+  }
+
+  .button_loading {
+    background-color: white;
+    padding: 2rem;
+  }
+
+  #chooseProgrammeBtn {
+    color: purple;
+    text-decoration: none;
+    cursor: pointer;
   }
 
   @-webkit-keyframes color-change-5x {
@@ -348,15 +363,5 @@
         0 0 60px rgba(255, 255, 255, 0.45), 0 0 110px rgba(255, 255, 255, 0.25),
         0 0 100px rgba(255, 255, 255, 0.1);
     }
-  }
-
-  .button_loading {
-    background-color: white;
-    padding: 2rem;
-  }
-
-  a {
-    color: purple;
-    text-decoration: none;
   }
 </style>
