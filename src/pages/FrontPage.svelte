@@ -1,5 +1,17 @@
 <script>
   import { navigate } from "svelte-navigator";
+  import { Howl, Howler } from "howler";
+  const sound = new Howl({
+    src: ["/static/turndown.mp3"],
+  });
+
+  function toggleSound() {
+    if (!sound.playing()) {
+      sound.play();
+      return;
+    }
+    sound.stop();
+  }
 </script>
 
 <div class="loading_container">
@@ -11,6 +23,7 @@
     class="button_loading"
     on:click={() => navigate("/uddannelse")}>SE RUS PROGRAMMET</button
   >
+  <button id="musicBtn" class="button_loading" on:click={() => toggleSound()}>Sæt gang i festen!</button>
 </div>
 
 <style>
@@ -25,7 +38,7 @@
     animation: color-change-5x 3s linear infinite alternate both;
   }
 
-  #chooseProgrammeBtn {
+  #chooseProgrammeBtn, #musicBtn {
     position: relative;
     background-color: white;
     border: none;
@@ -40,7 +53,7 @@
     cursor: pointer;
   }
 
-  #chooseProgrammeBtn:hover {
+  #chooseProgrammeBtn:hover, #musicBtn:hover {
     background: #fff;
     box-shadow: 0px 2px 20px 10px #d0efff;
     color: #000;
@@ -48,7 +61,7 @@
     background: transparent; */
   }
 
-  #chooseProgrammeBtn:after {
+  #chooseProgrammeBtn:after, #musicBtn:after {
     content: "";
     background: #f1c40f;
     display: block;
@@ -61,7 +74,7 @@
     transition: all 0.8s;
   }
 
-  #chooseProgrammeBtn:active:after {
+  #chooseProgrammeBtn:active:after, #musicBtn:active:after {
     padding: 0;
     margin: 0;
     opacity: 1;
