@@ -4,7 +4,7 @@
     const { title, color } = programme;
 
     const goToProgrammePage = () => {
-        navigate(`uddannelse/${title}`, { programme });
+        navigate(`uddannelse/${title}`);
     }
 </script>
 

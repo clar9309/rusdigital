@@ -35,7 +35,7 @@
 	<Route path="uddannelse">
 		<ChooseProgrammePage/>
 	</Route>
-	<Route path="uddannelse/:navn">
+	<Route path="uddannelse/:title">
 		<ProgrammePage/>
 	</Route>
 </Router>
