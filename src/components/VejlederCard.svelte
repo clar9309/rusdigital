@@ -5,9 +5,20 @@
     function redirectSocial() {
         console.log("Redirected..")
     }
+
+    function vejlederColor(studie) {
+        switch(studie) {
+            case "Datamatiker": return "#81C259"
+            case "Multimediedesigner": return "#394BF2"
+            case "Økonomi & IT": return "#F39C39"
+            case "Software Udvikling": return "#FFD954"
+            default: ""
+            break
+        }
+    }
 </script>
 
-<div class="card" on:click={redirectSocial} in:fly="{{x: 200, duration: 500}}">
+<div style:background-color={vejlederColor(studie)} class="card" on:click={redirectSocial} in:fly="{{x: 200, duration: 500}}">
     <h2>{navn} </h2>
     <h3>{studie}, {semester}. semester</h3>
 

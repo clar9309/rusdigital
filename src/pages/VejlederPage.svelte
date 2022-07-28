@@ -2,8 +2,26 @@
     import VejlederCard from '../components/VejlederCard.svelte'
     import { Vejleder } from '../Entities/Vejleder'
     const vejlederArray = [
-        new Vejleder("Jimmy", "https://scontent-cph2-1.xx.fbcdn.net/v/t1.18169-9/12717359_10154048257338629_3084668126806839716_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=6ehQoGSgM2oAX_8bg6W&tn=1NywvpUc4lEQ2BdW&_nc_ht=scontent-cph2-1.xx&oh=00_AT-wRQzqv90m5WVLKxrwsjmhDLAhS2FcH9njsnz6oX3spQ&oe=62EBF5E5", "Datamatiker", 5, "Yayeet"),
-        new Vejleder("Frederik", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ70CwB1pm8I1w_HKY_w3MIMbCd7kQuFD9QZw&usqp=CAU", "Datamatiker", 5, "LP???")
+        new Vejleder("Frederik", "static/images/Frederik_l.png", "Datamatiker", 5, "LP???"),
+        new Vejleder("Markus", "static/images/Markus.jpg", "Økonomi & IT", 2, "Jeg glemte engang min cykel i et S-tog, og fik den aldrig tilbage."),
+        new Vejleder("Jimmy", "static/images/Jimmy.png", "Datamatiker", 5, "Jeg fandt engang en gratis cykel i S-toget."),
+        new Vejleder("Magnus", "static/images/Magnus.jpg", "Multimediedesigner", 4, "Jeg elsker skildpadder."),
+        new Vejleder("William", "static/images/William.jpg", "Datamatiker", 2, "Efternavn betyder 'Kommer fra Assens'"),
+        new Vejleder("Christian", "static/images/Christian.jpg", "Software Udvikling", 2, "Har købt 99 kroketsæt til 98 kr. + fragt."),
+        new Vejleder("Elisa", "static/images/Elisa.jpg", "Datamatiker", 3, "Jeg lader aldrig en pakke kylling røre mine andre varer, når jeg er ude og handle."),
+        new Vejleder("Naomi", "static/images/Naomi.jpg", "Datamatiker", 3, "Jeg kan kun lide grønne og røde vingummier."),
+        new Vejleder("Nanna", "static/images/Nanna.png", "Datamatiker", 3, "Jeg er ret god til at bage."),
+        new Vejleder("Veronica", "static/images/Veronica.png", "Datamatiker", 2, "Jeg hader gråspurve"),
+        new Vejleder("Silas", "static/images/Silas.jpg", "Multimediedesigner", 2, "Jeg elsker is."),
+        new Vejleder("Tobias", "static/images/Tobias.jpg", "Datamatiker", 3, "Jeg har en 2 meter høj kålplante på min altan."),
+        new Vejleder("Puk", "static/images/Puk.jpg", "Multimediedesigner", 3, "Jeg har altid mindst 1 blåt mærke."),
+        new Vejleder("Alina", "static/images/Alina.jpg", "Økonomi & IT", 2, "Jeg har en ting for at stjæle dyr, når jeg er fuld."),
+        new Vejleder("Frederik H", "static/images/Frederik_h.jpg", "Datamatiker", 2, "Er engang blevet jagtet gennem en regnskov af en orangutang."),
+        new Vejleder("Troels", "static/images/Troels.jpg", "Datamatiker", 3, "Jeg kan fornærme folk på tegnsprog."),
+        new Vejleder("Tomine", "static/images/Tomine.jpg", "Multimediedesigner", 4, "Når jeg er fuld, tror jeg automatisk, at jeg kan dansk."),
+        new Vejleder("Zacharias", "static/images/", "Økonomi & IT", 3, "Jeg kan få mit ben bag mit hoved."),
+        new Vejleder("Albert", "static/images/Albert.jpg", "Datamatiker", 2, "Fik engang konfiskeret en kniv i lufthavnen."),
+        new Vejleder("Charlotte", "static/images/Charlotte.jpg", "Multimediedesigner", 3, "Jeg har engang vundet 100 kr. ved at spise 1 liter is på 14 minutter.")
     ]
     
 </script>
