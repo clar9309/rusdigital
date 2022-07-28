@@ -1,15 +1,16 @@
 <script>
     import { fly } from "svelte/transition"
     export let vejlederInfo;
-    const { navn, imgSrc, studie, semester, beskrivelse } = vejlederInfo;
-    function redirectSocial() {
+    const { navn, imgSrc, studie, semester, beskrivelse, ig } = vejlederInfo;
+    function redirectIG() {
         console.log("Redirected..")
+        window.open("https://www.instagram.com/" + ig)
     }
 
     function vejlederColor(studie) {
         switch(studie) {
             case "Datamatiker": return "#81C259"
-            case "Multimediedesigner": return "#394BF2"
+            case "Multimediedesigner": return "#348feb"
             case "Økonomi & IT": return "#F39C39"
             case "Software Udvikling": return "#FFD954"
             default: ""
@@ -18,7 +19,7 @@
     }
 </script>
 
-<div style:background-color={vejlederColor(studie)} class="card" on:click={redirectSocial} in:fly="{{x: 200, duration: 500}}">
+<div style:background-color={vejlederColor(studie)} class="card" in:fly="{{x: 200, duration: 500}}">
     <h2>{navn} </h2>
     <h3>{studie}, {semester}. semester</h3>
 
@@ -26,6 +27,11 @@
 
     <div id="description-wrapper">
         <p id="description">{beskrivelse}</p>
+    </div>
+    <div class="socials">
+        {#if ig !== undefined}
+        <img class="icon" src={"static/images/ig_icon.png"} alt="insta" on:click={redirectIG}/>
+        {/if}
     </div>
 </div>
 
@@ -61,11 +67,23 @@
     }
 
     #description-wrapper {
-        height: 20%;
+        height: 15%;
         overflow: hidden;
     }
 
     #description {
         text-align: left;
+    }
+    
+    .socials {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .icon {
+        max-width: 3em;
+        max-height: 3em;
+
+        border-radius: 5em;
     }
 </style>
