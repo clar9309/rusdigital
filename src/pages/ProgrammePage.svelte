@@ -136,17 +136,15 @@
   }
 
   .header {
-    padding: 2rem;
+    padding: 1rem;
   }
 
   .facebook a,
   .insta a {
     color: black;
   }
-
-  .social,
-  .poem {
-    padding: 2rem;
+  .social {
+    margin: 2rem 0 1rem 1rem;
   }
 
   .facebook,
@@ -158,6 +156,7 @@
 
   .poem {
     width: 90vw;
+    margin: 0 1rem 2rem;
   }
 
   .schedule {

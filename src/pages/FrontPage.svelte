@@ -13,7 +13,6 @@
     sound.stop();
   }
 </script>
-
 <div class="loading_container">
   <p class="loading_1">ER DU KLAR?</p>
   <p class="loading_2">TIL RUS DIGITAL 2022</p>
@@ -38,12 +37,17 @@
     animation: color-change-5x 3s linear infinite alternate both;
   }
 
+  .wrapper {
+    display: flex;
+  }
+
   #chooseProgrammeBtn, #musicBtn {
     position: relative;
     background-color: white;
     border: none;
-    padding: 20px;
-    width: 300px;
+    padding: .5rem;
+    width: 30vw;
+    height: 10vh;
     text-align: center;
     -webkit-transition-duration: 0, 9s;
     transition-duration: 0, 7s;
@@ -65,7 +69,7 @@
     content: "";
     background: #f1c40f;
     display: block;
-    position: absolute;
+    /* position: absolute; */
     padding-top: 300%;
     padding-left: 350%;
     margin-left: -20px !important;

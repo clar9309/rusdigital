@@ -13,7 +13,7 @@
     .card-container {
         display: flex;
         flex-wrap: wrap;
-        width: 80vw;
+        max-width: 90vw;
         justify-content: space-evenly;
         row-gap: 30px;
         column-gap: 5px;

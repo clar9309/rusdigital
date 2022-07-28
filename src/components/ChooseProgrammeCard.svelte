@@ -12,12 +12,15 @@
 
 <style>
     .card {
-        width: 25vw;
-        height: 45vh;
+        /* width: 25vw;
+        height: 45vh; */
         display: flex;
         align-items: center;
         justify-content: center;
         cursor: pointer;
+        flex: 0 1 33%;
+        overflow-wrap: anywhere;
+        font-size: clamp(0.4rem, 2.5vw - 0.1rem, 1.5rem);
     }
 
     .card:hover {
