@@ -23,6 +23,15 @@
         new Vejleder("Albert", "static/images/Albert.jpg", "Datamatiker", 2, "Fik engang konfiskeret en kniv i lufthavnen."),
         new Vejleder("Charlotte", "static/images/Charlotte.jpg", "Multimediedesigner", 3, "Jeg har engang vundet 100 kr. ved at spise 1 liter is på 14 minutter.")
     ]
+
+    function randomSort() {
+        for(let i = 0; i < vejlederArray.length; i++) {
+            const randomIndex = Math.floor(Math.random() * vejlederArray.length - i) + i
+            vejlederArray[i] = vejlederArray.splice(randomIndex, 1, vejlederArray[i])[0]
+        }
+    }
+    
+    randomSort()
     
 </script>
 <div id="games-table-wrapper">

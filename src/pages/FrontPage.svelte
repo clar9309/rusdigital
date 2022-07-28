@@ -23,7 +23,11 @@
     on:click={() => navigate("/uddannelse")}>SE RUS PROGRAMMET</button
   >
   <button id="musicBtn" class="button_loading" on:click={() => toggleSound()}>Sæt gang i festen!</button>
-  <button style="text-align:center" class="button_loading" on:click={() => navigate("/vejledere")}>Mød dine vejledere</button>
+  <button 
+  style="text-align:center"
+  id="chooseProgrammeBtn"
+  class="button_loading"
+  on:click={() => navigate("/vejledere")}>MØD VEJLEDERNE</button>
 
 </div>
 
