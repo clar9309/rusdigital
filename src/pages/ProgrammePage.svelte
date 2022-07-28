@@ -5,7 +5,9 @@
   const programme = $programmes.find(
     (programme) => programme.title == $params.title
   );
-  const changeToWhite = programme.colorName == "sort" ? true : false;
+  const whiteBannerText = ['blå', 'grøn', 'orange', 'pink', 'gul', 'rød', 'sort'];
+  const changeToWhite = whiteBannerText.includes(programme.colorName) ? true : false;
+  const blackSchdeuleText = programme.colorName == 'hvid';
 </script>
 
 <!-- blå, grøn, orange, pink, gul, rød skal skiftes   -->
@@ -40,7 +42,7 @@
             d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95z"
           /></svg
         >
-        <a href="#">Tilmeld facebook gruppe, KEA DIGITAL</a>
+        <a target="_blank" href="https://www.facebook.com/groups/533253438593751/">Tilmeld facebook gruppe, KEA DIGITAL</a>
       </div>
 
       <div class="insta">
@@ -59,7 +61,7 @@
             d="M160 128a32 32 0 1 1-32-32a32.1 32.1 0 0 1 32 32Zm68-44v88a56 56 0 0 1-56 56H84a56 56 0 0 1-56-56V84a56 56 0 0 1 56-56h88a56 56 0 0 1 56 56Zm-52 44a48 48 0 1 0-48 48a48 48 0 0 0 48-48Zm16-52a12 12 0 1 0-12 12a12 12 0 0 0 12-12Z"
           /></svg
         >
-        <a href="#">Følg @keadigital</a>
+        <a target="_blank" href="https://www.instagram.com/kea.digital/">Følg @kea.digital</a>
       </div>
     </div>
 
@@ -69,7 +71,7 @@
         Hey du der, pludselig stod du i bare tæer, du skal huske dine sko, fordi
         du skal til introuge, øhh nej, dage. Husk en <b>roulade</b>, gerne med
         mælkechokolade eller marmelade, vi håber ikke du kommer til skade på din
-        håndflade. Vi gerne se dig den 19 august, fredag kl 12, hvor du vil
+        håndflade. Vi gerne se dig den 19 august, fredag kl. 12, hvor du vil
         blive tildelt et hold, du skal også pakke noget, på en sej måde. Du skal
         medbringe en <b>kikkert</b> det er helt sikkert, og en
         <b>selfiestang</b>, så er vi sgu i gang. Du skal deltage i en
@@ -84,34 +86,33 @@
         dystens ånd vil kalde. Til sidst på dagen vil der blive holdt en fest,
         hvor du er inviteret med som gæst.
       </p>
+      <p><b>Så husk</b><br/>
+        1) Tilmeld dig Facebook gruppen (så bliver du også tilmeldt introdagene) <br/>
+        2) Ankom iført tøj i farven <b style="color: {programme.color};">{programme.colorName}</b><br/>
+        3) Medbring en <b>roulade</b>, en <b>kikkert</b> og en <b>selfiestang</b></p>
     </div>
 
-    <div class="schedule" style="background-color: {programme.color};">
-      <h2>PROGRAM FOR DE FEDE DAGE</h2>
+    <div class="schedule" class:black={blackSchdeuleText} style="background-color: {programme.color};">
+      <h1>PROGRAM FOR DE FEDE DAGE</h1>
       <div class="schedule_day">
         <p class="dato">19 <br /> AUG</p>
         <p class="description">
           <b> TOUR DE CAMPUS & AKTIVITETER</b><br />
-          Kl. 12.00 <br />
-          Guldbergsgade 29N, 2200 Nørrebro
+          Kl. 12.00-16.00 <br />
+          Guldbergsgade 29N, 2200 København N
         </p>
       </div>
 
       <div class="schedule_day">
-        <p class="dato">19 <br /> AUG</p>
+        <p class="dato">20 <br /> AUG</p>
         <p class="description">
-          <b> TOUR DE CAMPUS & AKTIVITETER</b> <br />
-          Kl. 12.00 <br />
-          Guldbergsgade 29N, 2200 Nørrebro
-        </p>
-      </div>
-
-      <div class="schedule_day">
-        <p class="dato">19 <br /> AUG</p>
-        <p class="description">
-          <b> TOUR DE CAMPUS & AKTIVITETER</b> <br />
-          Kl. 12.00 <br />
-          Guldbergsgade 29N, 2200 Nørrebro
+          <b> DYSTEN OM DEN GYLDNE STØVLE</b> <br />
+          Kl. 12.00-16.00 <br />
+          Trianglen Metro St. ved Fælledparken <br/> <br/>
+          <b> PRISOVERRÆKNING OG FEST</b> <br />
+          Kl. 19.00-01.00 <br />
+          Guldbergsgade 29N, 2200 København N <br/>
+          I kantinen
         </p>
       </div>
     </div>
@@ -159,7 +160,12 @@
     width: 90vw;
   }
 
-  .schedule h2 {
+  .schedule {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .schedule h1 {
     text-align: center;
     color: white;
     padding-top: 2rem;
@@ -169,7 +175,7 @@
   .schedule_day {
     display: flex;
     justify-content: center;
-    gap: 1rem;
+    gap: 1.5rem;
     align-items: center;
     color: white;
   }
@@ -183,5 +189,9 @@
   .description {
     font-weight: 400;
     font-size: clamp(0.5rem, 3.4vw - 0.1rem, 1.6rem);
+  }
+
+  .black p, .black h1 {
+    color: black;
   }
 </style>
