@@ -22,7 +22,8 @@
 
     .mobile-card-container {
         display: flex;
-        flex-wrap: wrap;
+        /* flex-wrap: wrap; */
+        flex-direction: column;
         max-width: 99vw;
         justify-content: space-evenly;
         row-gap: 1vh;
