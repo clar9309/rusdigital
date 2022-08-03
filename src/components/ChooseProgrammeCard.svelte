@@ -30,7 +30,7 @@
         flex: 0 1 33%;
         /* overflow-wrap: anywhere; */
         font-size: clamp(0.4rem, 2.5vw - 0.1rem, 1.5rem);
-        width: 90vw;
+        width: 90%;
         height: 10vh;
         border-radius: 1em;
         font-size: larger;
