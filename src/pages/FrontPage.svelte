@@ -16,9 +16,10 @@
 </script>
 <div class="loading_container">
   <p class="loading_1">ER DU KLAR?</p>
-  <p class="loading_2">TIL RUS DIGITAL 2022</p>
+  
 
   <DeviceDetector showInDevice="desktop">
+    <p class="loading_2">TIL RUS DIGITAL 2022</p>
     <button
     style="text-align:center"
     id="chooseProgrammeBtn"
@@ -34,6 +35,7 @@
   </DeviceDetector>
 
   <DeviceDetector showInDevice="mobile">
+    <div class="loading_2">TIL RUS DIGITAL 2022</div>
     <div class="flex-wrapper">
       <button
       id="chooseProgrammeMobileBtn"

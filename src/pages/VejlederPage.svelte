@@ -28,7 +28,7 @@
         new Vejleder("Marius", "static/images/Marius.png", "Digital Konceptudvikling", 1, "Er meget bedre end Jimmy til beerpong.", "mariusramdahl"),
         new Vejleder("Mikkel", "static/images/Mikkel.png", "Webudvikling", 1, "Rusveteran, og indiskutabelt den bedste til beerpong. Stamgæst hos guldbar.", "mikkelprobert"),
         new Vejleder("Simon", "static/images/Simon.png", "Datamatiker", 3, "Glad, smilende og udadvendt ung mand direkte importeret fra Lolland. Døjer med en indavls dialekt. Jeg er nok den mest alkoholiserede fitness entusiast du kommer til at møde.", "simonigild"),
-        new Vejleder("Victor", "static/images/Victor.png", "Datamatiker", 3, "elsker jeg at være sammen med venner, møde nye mennesker, træne, høre musik og alt derimellem. Er meget udadvendt og imødekommende :)"),
+        new Vejleder("Victor", "static/images/Victor.png", "Datamatiker", 3, "Elsker at være sammen med venner, møde nye mennesker, træne, høre musik og alt derimellem. Er meget udadvendt og imødekommende :)"),
     
     ]
 
@@ -53,5 +53,6 @@
             display: flex;
             flex-wrap: wrap;
             width: 99vw;
+            justify-content: space-evenly;
         }
 </style>

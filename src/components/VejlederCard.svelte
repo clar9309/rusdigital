@@ -1,5 +1,6 @@
 <script>
     import { fly } from "svelte/transition"
+    import DeviceDetector from "svelte-device-detector";
     export let vejlederInfo;
     const { navn, imgSrc, studie, semester, beskrivelse, ig } = vejlederInfo;
     function redirectIG() {
@@ -28,23 +29,40 @@
         }
     }
 </script>
-
-<div style:background-color={vejlederColor()} class="card" in:fly="{{x: 200, duration: 500}}">
-    <h2>{navn} </h2>
-    <h3>{studie}, {semester}. semester</h3>
-
-    <img src={imgSrc} alt="" />
-
-    <div style:height={vejlederBeskrivelse()} id="description-wrapper">
-        <p id="description">{beskrivelse}</p>
+<DeviceDetector showInDevice="desktop">
+    <div style:background-color={vejlederColor()} class="card" in:fly="{{x: 200, duration: 500}}">
+        <h2>{navn} </h2>
+        <h3>{studie}, {semester}. semester</h3>
+    
+        <img src={imgSrc} alt="" />
+    
+        <div style:height={vejlederBeskrivelse()} id="description-wrapper">
+            <p id="description">{beskrivelse}</p>
+        </div>
+        <div class="socials">
+            {#if ig !== undefined}
+            <img class="icon" src={"static/images/ig_icon.png"} alt="insta" on:click={redirectIG}/>
+            {/if}
+        </div>
     </div>
-    <div class="socials">
-        {#if ig !== undefined}
-        <img class="icon" src={"static/images/ig_icon.png"} alt="insta" on:click={redirectIG}/>
-        {/if}
+</DeviceDetector>
+<DeviceDetector showInDevice="mobile">
+    <div style:background-color={vejlederColor()} class="mobile-card">
+        <h2>{navn} </h2>
+        <h3>{studie}, {semester}. semester</h3>
+    
+        <img src={imgSrc} alt="" />
+    
+        <div style:height={vejlederBeskrivelse()} id="description-wrapper">
+            <p id="description">{beskrivelse}</p>
+        </div>
+        <div class="socials">
+            {#if ig !== undefined}
+            <img class="icon" src={"static/images/ig_icon.png"} alt="insta" on:click={redirectIG}/>
+            {/if}
+        </div>
     </div>
-</div>
-
+</DeviceDetector>
 <style>
     p {
         color:rgba(0, 0, 0, 1)
@@ -56,6 +74,20 @@
     h3 {
         margin-block-start: 0.3em;
         margin-block-end: 0.5em;
+    }
+
+    .mobile-card {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        width: 99vw;
+        height: 30em;
+        border-radius: 10px;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+        transition: box-shadow 0.3s ease-in-out;
+        /* padding: 0em 1em; */
+        /* margin: .5em;; */
     }
     .card {
         display: flex;
@@ -69,7 +101,6 @@
         transition: box-shadow 0.3s ease-in-out;
         padding: 0em 1em;
         margin: .5em;
-        background-color: rgba(255, 255, 255, 0.25) ;
         cursor: pointer;
     }
 
