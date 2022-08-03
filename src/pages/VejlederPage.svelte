@@ -54,6 +54,6 @@
             flex-wrap: wrap;
             width: 99vw;
             justify-content: space-evenly;
-            background-color: grey;
+            background-color: lightgrey;
         }
 </style>

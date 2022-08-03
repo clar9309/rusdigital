@@ -5,13 +5,16 @@
   const sound = new Howl({
     src: ["/static/turndown.mp3"],
   });
+  $:musicTxt = "Sæt gang i festen!"
 
   function toggleSound() {
     if (!sound.playing()) {
       sound.play();
+      musicTxt = "Afslut festen! 😢"
       return;
     }
     sound.stop();
+    musicTxt = "Sæt gang i festen!"
   }
 </script>
 <div class="loading_container">
@@ -24,24 +27,26 @@
     style="text-align:center"
     id="chooseProgrammeBtn"
     class="button_loading"
-    on:click={() => navigate("/uddannelse")}>SE RUS PROGRAMMET</button
-  >
-  <button id="musicBtn" class="button_loading" on:click={() => toggleSound()}>Sæt gang i festen!</button>
-  <button 
-  style="text-align:center"
-  id="vejlederBtn"
-  class="button_loading"
-  on:click={() => navigate("/vejledere")}>MØD VEJLEDERNE</button>
+    on:click={() => navigate("/uddannelse")}>SE RUS PROGRAMMET</button>
+    <button id="musicBtn" class="button_loading" on:click={() => toggleSound()}>{musicTxt}</button>
+    <button 
+      style="text-align:center"
+      id="vejlederBtn"
+      class="button_loading"
+      on:click={() => navigate("/vejledere")}>MØD VEJLEDERNE</button>
   </DeviceDetector>
 
   <DeviceDetector showInDevice="mobile">
     <div class="loading_2">TIL RUS DIGITAL 2022</div>
-    <div class="flex-wrapper">
-      <button
-      id="chooseProgrammeMobileBtn"
-      class="button_loading"
-      on:click={() => navigate("/uddannelse")}>SE RUS PROGRAMMET</button>
-      <button id="musicMobileBtn" class="button_loading" on:click={() => toggleSound()}>Sæt gang i festen!</button>
+      <div class="flex-wrapper">
+        <button
+          id="chooseProgrammeMobileBtn"
+          class="button_loading"
+          on:click={() => navigate("/uddannelse")}>SE RUS PROGRAMMET
+        </button>
+     
+      <button id="musicMobileBtn" class="button_loading" on:click={() => toggleSound()}>{musicTxt}</button>
+      
       <button 
         id="vejlederMobileBtn"
         class="button_loading"

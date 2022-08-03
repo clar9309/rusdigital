@@ -16,6 +16,7 @@
         flex-wrap: wrap;
         max-width: 90vw;
         justify-content: space-evenly;
+        border-radius: 1em;
         row-gap: 30px;
         column-gap: 5px;
     }
