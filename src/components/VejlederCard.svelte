@@ -81,13 +81,13 @@
         flex-direction: column;
         flex-wrap: wrap;
         align-items: flex-start;
-        width: 99vw;
+        width: 95vw;
         height: 30em;
         border-radius: 10px;
         box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
         transition: box-shadow 0.3s ease-in-out;
-        /* padding: 0em 1em; */
-        /* margin: .5em;; */
+        padding: 0em 1em;
+        margin: .5em;
     }
     .card {
         display: flex;
