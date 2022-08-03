@@ -1,5 +1,6 @@
 <script>
   import { navigate } from "svelte-navigator";
+  import DeviceDetector from "svelte-device-detector";
   import { Howl, Howler } from "howler";
   const sound = new Howl({
     src: ["/static/turndown.mp3"],
@@ -16,7 +17,9 @@
 <div class="loading_container">
   <p class="loading_1">ER DU KLAR?</p>
   <p class="loading_2">TIL RUS DIGITAL 2022</p>
-  <button
+
+  <DeviceDetector showInDevice="desktop">
+    <button
     style="text-align:center"
     id="chooseProgrammeBtn"
     class="button_loading"
@@ -28,6 +31,23 @@
   id="chooseProgrammeBtn"
   class="button_loading"
   on:click={() => navigate("/vejledere")}>MØD VEJLEDERNE</button>
+  </DeviceDetector>
+
+  <DeviceDetector showInDevice="mobile">
+    <div class="flex-wrapper">
+      <button
+      id="chooseProgrammeBtn"
+      class="button_loading"
+      on:click={() => navigate("/uddannelse")}>SE RUS PROGRAMMET</button>
+      <button id="musicBtn" class="button_loading" on:click={() => toggleSound()}>Sæt gang i festen!</button>
+      <button 
+        id="chooseProgrammeBtn"
+        class="button_loading"
+        on:click={() => navigate("/vejledere")}>MØD VEJLEDERNE
+      </button>
+    </div>
+    
+  </DeviceDetector>
 
 </div>
 
@@ -45,6 +65,11 @@
 
   .wrapper {
     display: flex;
+  }
+  .flex-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 
   #chooseProgrammeBtn, #musicBtn {

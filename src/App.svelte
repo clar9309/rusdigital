@@ -6,6 +6,7 @@
 	} from "svelte-navigator";
 	import { toast, SvelteToast } from "@zerodevx/svelte-toast";
 	import { faker } from '@faker-js/faker';
+	import DeviceDetector from "svelte-device-detector";
 	import FrontPage from './pages/FrontPage.svelte'
 	import About from './pages/About.svelte'
 	import VejlederPage from './pages/VejlederPage.svelte'
@@ -59,21 +60,11 @@
 		randomActivity()
 	}, 500)
 </script>
+<DeviceDetector showInDevice="desktop">
+	<SvelteToast />
+</DeviceDetector>
 
-<SvelteToast />
 <Router>
-	<!-- Navbar -->
-	<!-- <div id="navDiv">
-		<nav>
-			<ul>
-				<li><Link to="/">Frontpage</Link></li>
-				<li><Link to="/about">About</Link></li>
-				<li><Link to="vejledere">Vejledere</Link></li>
-
-			</ul>
-		</nav>
-	</div> -->
-
 	<Route path="/" primary={false}>
 		<FrontPage/>
 	</Route>
