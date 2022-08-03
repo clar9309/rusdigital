@@ -4,12 +4,15 @@
   import { Howl, Howler } from "howler";
   const sound = new Howl({
     src: ["/static/turndown.mp3"],
+    volume: 0.05
   });
+
   $:musicTxt = "Sæt gang i festen!"
 
   function toggleSound() {
     if (!sound.playing()) {
       sound.play();
+      sound.fade(0.05, 0.5, 10000)
       musicTxt = "Afslut festen! 😢"
       return;
     }
