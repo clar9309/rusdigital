@@ -36,12 +36,12 @@
   <DeviceDetector showInDevice="mobile">
     <div class="flex-wrapper">
       <button
-      id="chooseProgrammeBtn"
+      id="chooseProgrammeMobileBtn"
       class="button_loading"
       on:click={() => navigate("/uddannelse")}>SE RUS PROGRAMMET</button>
-      <button id="musicBtn" class="button_loading" on:click={() => toggleSound()}>Sæt gang i festen!</button>
+      <button id="musicMobileBtn" class="button_loading" on:click={() => toggleSound()}>Sæt gang i festen!</button>
       <button 
-        id="vejlederBtn"
+        id="vejlederMobileBtn"
         class="button_loading"
         on:click={() => navigate("/vejledere")}>MØD VEJLEDERNE
       </button>
@@ -69,12 +69,28 @@
     justify-content: center;
   }
 
+  #chooseProgrammeMobileBtn, #musicMobileBtn, #vejlederMobileBtn {
+    position: relative;
+    background-color: white;
+    border: none;
+    /* border-radius: 5em; */
+    width: 80vw;
+    height: 10vh;
+    text-align: center;
+    -webkit-transition-duration: 0, 9s;
+    transition-duration: 0, 7s;
+    text-decoration: none;
+    overflow: hidden;
+    color: black;
+    cursor: pointer;
+    /* font-size: larger; */
+  }
+
   #chooseProgrammeBtn, #musicBtn, #vejlederBtn {
     position: relative;
     background-color: white;
     border: none;
     border-radius: 5em;
-    /* padding: .5rem; */
     width: 20vw;
     height: 10vh;
     text-align: center;
@@ -91,19 +107,12 @@
     background: #fff;
     box-shadow: 0px 2px 20px 10px #d0efff;
     color: #000;
-    /* border: 2px solid white;
-    background: transparent; */
   }
 
   #chooseProgrammeBtn:after, #musicBtn:after {
     content: "";
     background: #f1c40f;
     display: block;
-    /* position: absolute; */
-    /* padding-top: 300%; */
-    /* padding-left: 350%; */
-    /* margin-left: -20px !important; */
-    /* margin-top: -120%; */
     opacity: 0;
     transition: all 0.8s;
   }
@@ -114,6 +123,7 @@
     opacity: 1;
     transition: 0s;
   }
+
 
   @-webkit-keyframes color-change-5x {
     0% {
