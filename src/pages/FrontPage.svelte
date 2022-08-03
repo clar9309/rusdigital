@@ -28,7 +28,7 @@
   <button id="musicBtn" class="button_loading" on:click={() => toggleSound()}>Sæt gang i festen!</button>
   <button 
   style="text-align:center"
-  id="chooseProgrammeBtn"
+  id="vejlederBtn"
   class="button_loading"
   on:click={() => navigate("/vejledere")}>MØD VEJLEDERNE</button>
   </DeviceDetector>
@@ -41,7 +41,7 @@
       on:click={() => navigate("/uddannelse")}>SE RUS PROGRAMMET</button>
       <button id="musicBtn" class="button_loading" on:click={() => toggleSound()}>Sæt gang i festen!</button>
       <button 
-        id="chooseProgrammeBtn"
+        id="vejlederBtn"
         class="button_loading"
         on:click={() => navigate("/vejledere")}>MØD VEJLEDERNE
       </button>
@@ -63,21 +63,19 @@
     animation: color-change-5x 3s linear infinite alternate both;
   }
 
-  .wrapper {
-    display: flex;
-  }
   .flex-wrapper {
     display: flex;
     flex-direction: column;
     justify-content: center;
   }
 
-  #chooseProgrammeBtn, #musicBtn {
+  #chooseProgrammeBtn, #musicBtn, #vejlederBtn {
     position: relative;
     background-color: white;
     border: none;
-    padding: .5rem;
-    width: 30vw;
+    border-radius: 5em;
+    /* padding: .5rem; */
+    width: 20vw;
     height: 10vh;
     text-align: center;
     -webkit-transition-duration: 0, 9s;
@@ -86,6 +84,7 @@
     overflow: hidden;
     color: black;
     cursor: pointer;
+    font-size: larger;
   }
 
   #chooseProgrammeBtn:hover, #musicBtn:hover {
@@ -101,10 +100,10 @@
     background: #f1c40f;
     display: block;
     /* position: absolute; */
-    padding-top: 300%;
-    padding-left: 350%;
-    margin-left: -20px !important;
-    margin-top: -120%;
+    /* padding-top: 300%; */
+    /* padding-left: 350%; */
+    /* margin-left: -20px !important; */
+    /* margin-top: -120%; */
     opacity: 0;
     transition: all 0.8s;
   }
