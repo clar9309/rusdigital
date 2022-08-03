@@ -72,9 +72,10 @@
   #chooseProgrammeMobileBtn, #musicMobileBtn, #vejlederMobileBtn {
     position: relative;
     background-color: white;
-    border: none;
+    border: solid;
+    border-color: black;
     /* border-radius: 5em; */
-    width: 80vw;
+    width: 100vw;
     height: 10vh;
     text-align: center;
     -webkit-transition-duration: 0, 9s;
@@ -82,8 +83,10 @@
     text-decoration: none;
     overflow: hidden;
     color: black;
-    cursor: pointer;
-    /* font-size: larger; */
+    padding: 0;
+    margin: 0;
+    /* cursor: pointer; */
+    font-size: larger;
   }
 
   #chooseProgrammeBtn, #musicBtn, #vejlederBtn {
