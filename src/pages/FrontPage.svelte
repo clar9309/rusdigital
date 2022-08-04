@@ -2,23 +2,21 @@
   import { navigate } from "svelte-navigator";
   import DeviceDetector from "svelte-device-detector";
   import { Howl, Howler } from "howler";
-  const sound = new Howl({
-    src: ["/static/turndown.mp3"],
-    volume: 0.05
-  });
+  import { sound } from '../stores/stores.js'
 
-  $:musicTxt = "Sæt gang i festen!"
+  $:musicTxt = $sound.playing() ? "Afslut festen! 😢" : "Sæt gang i festen!"
 
   function toggleSound() {
-    if (!sound.playing()) {
-      sound.play();
-      sound.fade(0.05, 0.5, 10000)
+    if (!$sound.playing()) {
+      $sound.play();
+      $sound.fade(0.05, 0.5, 10000)
       musicTxt = "Afslut festen! 😢"
       return;
     }
-    sound.stop();
+    $sound.stop();
     musicTxt = "Sæt gang i festen!"
   }
+
 </script>
 <div class="loading_container">
   <p class="loading_1">ER DU KLAR?</p>

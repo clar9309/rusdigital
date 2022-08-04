@@ -1,5 +1,6 @@
-import { readable } from "svelte/store";
+import { readable, writable } from "svelte/store";
 import { Programme } from "../Entities/Programme";
+import { Howl, Howler } from "howler";
 
 /* export const poem = `
 Hey du der, pludselig stod du i bare tæer, du skal huske dine sko, fordi du skal til introuge, øhh nej, dage. 
@@ -20,3 +21,11 @@ const programmeArray = [
     new Programme('IT-Sikkerhed', '#D95B4D', 'rød'),
 ];
 export const programmes = readable(programmeArray);
+
+export const sound = writable(new Howl({
+    src: ["/static/turndown.mp3"],
+    volume: 0.05,
+    onend: function() {
+        musicTxt = "Sæt gang i festen!"
+    }
+  }))
