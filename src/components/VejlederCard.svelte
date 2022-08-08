@@ -32,14 +32,14 @@
     }
 </script>
 <DeviceDetector showInDevice="desktop">
-    <div style:background-color={vejlederColor()} class="card" in:fly="{{x: 200, duration: 500}}">
+    <div style:background-color={vejlederColor()} style:color={studie === "Webudvikling"? "#FFFFFF" : "#000000"} class="card" in:fly="{{x: 200, duration: 500}}">
         <h2>{navn} </h2>
         <h3>{studie}, {semester}. semester</h3>
     
         <img src={imgSrc} alt="" />
     
         <div style:height={vejlederBeskrivelse()} id="description-wrapper">
-            <p id="description">{beskrivelse}</p>
+            <p id="description" style:color={studie === "Webudvikling"? "#FFFFFF" : "#000000"}>{beskrivelse} </p>
         </div>
         <div class="socials">
             {#if ig !== undefined}
@@ -49,14 +49,14 @@
     </div>
 </DeviceDetector>
 <DeviceDetector showInDevice="mobile">
-    <div style:background-color={vejlederColor()} class="mobile-card">
+    <div style:background-color={vejlederColor()} style:color={studie === "Webudvikling"? "#FFFFFF" : "#000000"} class="mobile-card">
         <h2>{navn} </h2>
         <h3>{studie}, {semester}. semester</h3>
     
         <img src={imgSrc} alt="" />
     
         <div style:height={vejlederBeskrivelse()} id="description-wrapper">
-            <p id="description">{beskrivelse}</p>
+            <p id="description" style:color={studie === "Webudvikling"? "#FFFFFF" : "#000000"}>{beskrivelse}</p>
         </div>
         <div class="socials">
             {#if ig !== undefined}
