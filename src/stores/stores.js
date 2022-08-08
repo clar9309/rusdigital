@@ -11,14 +11,14 @@ Selvom vi skal hygge fredagen lang, så skal det ikke stoppe os for sejrssang. D
 `; */
 
 const programmeArray = [
-    new Programme('Multimediedesign', '#394BF2', 'blå'),
-    new Programme('Datamatiker', '#81C259', 'grøn'),
-    new Programme('Business Økonomi-IT', '#F39C39', 'orange'),
-    new Programme('Digital Konceptudvikling', '#FFFFFF', 'hvid'),
-    new Programme('IT-Arkitektur', '#000000', 'sort'),
-    new Programme('Webudvikling', '#FF9FE4', 'lyserød'),
-    new Programme('Softwareudvikling', '#FFD954', 'gul'),
-    new Programme('IT-Sikkerhed', '#D95B4D', 'rød'),
+    new Programme('Multimediedesign', '#81C259', 'grøn'),
+    new Programme('Datamatiker', '#394BF2', 'blå'),
+    new Programme('Business Økonomi-IT', '#D95B4D', 'rød'),
+    new Programme('Digital Konceptudvikling', '#F39C39', 'orange'),
+    new Programme('IT-Arkitektur', '#7B3F00', 'brun'),
+    new Programme('Webudvikling', '#000000', 'sort'),
+    new Programme('Softwareudvikling', '#FFFFFF', 'hvid'),
+    new Programme('IT-Sikkerhed', '#FFD954', 'gul'),
 ];
 export const programmes = readable(programmeArray);
 

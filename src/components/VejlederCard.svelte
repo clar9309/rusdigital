@@ -10,12 +10,14 @@
 
     function vejlederColor() {
         switch(studie) {
-            case "Datamatiker": return "#81C259"
-            case "Multimediedesigner": return "#348feb"
-            case "Økonomi & IT": return "#F39C39"
-            case "Software Udvikling": return "#FFD954"
-            case "Webudvikling": return "#FF9FE4"
-            case "Digital Konceptudvikling": return "#FFFFFF"
+            case "Multimediedesigner": return "#81C259"
+            case "Datamatiker": return "#394BF2"
+            case "Økonomi & IT": return "#D95B4D"
+            case "Digital Konceptudvikling": return "#F39C39"
+            case "IT-Arkitektur": return "#7B3F00"
+            case "Webudvikling": return "#000000"
+            case "Software Udvikling": return "#FFFFFF"
+            case "IT-Sikkerhed": return "#FFD954"
             default: ""
             break
         }

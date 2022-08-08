@@ -5,9 +5,10 @@
   const programme = $programmes.find(
     (programme) => programme.title == $params.title
   );
-  const whiteBannerText = ['blå', 'grøn', 'orange', 'pink', 'gul', 'rød', 'sort'];
+  const whiteBannerText = ['blå', 'grøn', 'orange', 'pink', 'gul', 'rød', 'sort', 'brun'];
   const changeToWhite = whiteBannerText.includes(programme.colorName) ? true : false;
   const blackSchdeuleText = programme.colorName == 'hvid';
+  const black_bg = programme.colorName == 'hvid'; 
 </script>
 
 <!-- blå, grøn, orange, pink, gul, rød skal skiftes   -->
@@ -88,7 +89,7 @@
       </p>
       <p><b>Så husk</b><br/>
         1) Tilmeld dig Facebook gruppen (så bliver du også tilmeldt introdagene) <br/>
-        2) Ankom iført tøj i farven <b style="color: {programme.color};">{programme.colorName}</b><br/>
+        2) Ankom iført tøj i farven <b class:black-bg={black_bg} style="color: {programme.color};">{programme.colorName}</b><br/>
         3) Medbring en <b>roulade</b>, en <b>kikkert</b> og en <b>selfiestang</b></p>
     </div>
 
@@ -192,5 +193,9 @@
 
   .black p, .black h1 {
     color: black;
+  }
+
+  .black-bg {
+    background-color: black;
   }
 </style>

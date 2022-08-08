@@ -7,7 +7,7 @@
     const goToProgrammePage = () => {
         navigate(`uddannelse/${title}`);
     }
-    const whiteText = colorName == 'sort';
+    const whiteText = colorName == 'sort' || colorName == 'brun';
     const useBorder = colorName == 'hvid';
 </script>
 
