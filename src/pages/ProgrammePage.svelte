@@ -102,8 +102,8 @@ import { useParams, navigate } from "svelte-navigator";
 
         {#if programme.title === "Multimediedesign"}
           <a target="_blank" href="https://discord.gg/9uFkVPdgQj">MMD22 A</a>
-          <a target="_blank" href="https://discord.gg/dXz4YgyYdG">MMD22 A</a>
-          <a target="_blank" href="https://discord.gg/pdPnA9mUHP">MMD22 A</a>
+          <a target="_blank" href="https://discord.gg/dXz4YgyYdG">MMD22 B</a>
+          <a target="_blank" href="https://discord.gg/pdPnA9mUHP">MMD22 C</a>
         {/if}
 
         {#if programme.title === "Business Økonomi-IT"}
