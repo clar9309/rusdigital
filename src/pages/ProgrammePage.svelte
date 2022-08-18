@@ -86,6 +86,9 @@ import { useParams, navigate } from "svelte-navigator";
           {#if programme.title === "Digital Konceptudvikling"} 
             <a target="_blank" href="https://discord.gg/tCUSzVBkeZ">Tilmeld dig din klasses discord kanal</a>
           {/if}
+          {#if programme.title === "IT-Sikkerhed"} 
+            <a target="_blank" href="https://discord.gg/nQFeEfVKjs">Tilmeld dig din klasses discord kanal</a>
+        {/if}
         {/if}
       </div>
       <div class="discord2">
@@ -95,11 +98,6 @@ import { useParams, navigate } from "svelte-navigator";
         <a target="_blank" href="https://discord.gg/kenaD6q5y9">Dat22b</a>
         <a target="_blank" href="https://discord.gg/a7wmTuMuuH">Dat22c</a>
         <a target="_blank" href="https://discord.gg/MaBy9XDGA9">Dat22d</a>
-        {/if}
-
-        {#if programme.title === "IT-Sikkerhed"} 
-            <a target="_blank" href="https://discord.gg/nQFeEfVKjs">ITS22 A</a>
-            <a target="_blank" href="https://discord.gg/A847WKdhc9">ITS22 B</a>
         {/if}
 
         {#if programme.title === "Multimediedesign"}
