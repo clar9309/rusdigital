@@ -1,5 +1,6 @@
 <script>
-  import { useParams, navigate } from "svelte-navigator";
+  import { tick } from "svelte";
+import { useParams, navigate } from "svelte-navigator";
   import { programmes } from "../stores/stores";
   const params = useParams();
   const programme = $programmes.find(
@@ -64,8 +65,53 @@
         >
         <a target="_blank" href="https://www.instagram.com/kea.digital/">Følg @kea.digital</a>
       </div>
+
+      <div class="discord1">
+        <!-- <img class="discord-icon" src={"../static/images/discord_icon.png"} alt="discord"/> -->
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-discord" viewBox="0 0 16 16">
+          <path d="M13.545 2.907a13.227 13.227 0 0 0-3.257-1.011.05.05 0 0 0-.052.025c-.141.25-.297.577-.406.833a12.19 12.19 0 0 0-3.658 0 8.258 8.258 0 0 0-.412-.833.051.051 0 0 0-.052-.025c-1.125.194-2.22.534-3.257 1.011a.041.041 0 0 0-.021.018C.356 6.024-.213 9.047.066 12.032c.001.014.01.028.021.037a13.276 13.276 0 0 0 3.995 2.02.05.05 0 0 0 .056-.019c.308-.42.582-.863.818-1.329a.05.05 0 0 0-.01-.059.051.051 0 0 0-.018-.011 8.875 8.875 0 0 1-1.248-.595.05.05 0 0 1-.02-.066.051.051 0 0 1 .015-.019c.084-.063.168-.129.248-.195a.05.05 0 0 1 .051-.007c2.619 1.196 5.454 1.196 8.041 0a.052.052 0 0 1 .053.007c.08.066.164.132.248.195a.051.051 0 0 1-.004.085 8.254 8.254 0 0 1-1.249.594.05.05 0 0 0-.03.03.052.052 0 0 0 .003.041c.24.465.515.909.817 1.329a.05.05 0 0 0 .056.019 13.235 13.235 0 0 0 4.001-2.02.049.049 0 0 0 .021-.037c.334-3.451-.559-6.449-2.366-9.106a.034.034 0 0 0-.02-.019Zm-8.198 7.307c-.789 0-1.438-.724-1.438-1.612 0-.889.637-1.613 1.438-1.613.807 0 1.45.73 1.438 1.613 0 .888-.637 1.612-1.438 1.612Zm5.316 0c-.788 0-1.438-.724-1.438-1.612 0-.889.637-1.613 1.438-1.613.807 0 1.451.73 1.438 1.613 0 .888-.631 1.612-1.438 1.612Z"/>
+        </svg>
+        {#if programme.title === "Datamatiker" || programme.title === "Multimediedesign" || programme.title === "IT-Sikkerhed" || programme.title === "Business Økonomi-IT"}
+        Tilmeld dig din klasses discord kanal her:
+        {:else}
+          {#if programme.title === "IT-Arkitektur"} 
+            <a target="_blank" href="https://discord.gg/UrWTRSbjmx">Tilmeld dig din klasses discord kanal</a>
+          {/if}
+          {#if programme.title === "Webudvikling"} 
+            <a target="_blank" href="https://discord.gg/GcaJpkXTEp">Tilmeld dig din klasses discord kanal</a>
+          {/if}
+          {#if programme.title === "IT-Softwareudvikling"} 
+            <a target="_blank" href="https://discord.gg/rVyEQcx9DH">Tilmeld dig din klasses discord kanal</a>
+          {/if}
+          {#if programme.title === "Digital Konceptudvikling"} 
+            <a target="_blank" href="https://discord.gg/tCUSzVBkeZ">Tilmeld dig din klasses discord kanal</a>
+          {/if}
+        {/if}
+      </div>
+      <div class="discord2">
+        
+        {#if programme.title === "Datamatiker"}
+        <a target="_blank" href="https://discord.gg/SuYpdEva4w">Dat22a</a>
+        <a target="_blank" href="https://discord.gg/kenaD6q5y9">Dat22b</a>
+        <a target="_blank" href="https://discord.gg/a7wmTuMuuH">Dat22c</a>
+        <a target="_blank" href="https://discord.gg/MaBy9XDGA9">Dat22d</a>
+        {/if}
+
+        {#if programme.title === "IT-Sikkerhed"} 
+            <a target="_blank" href="https://discord.gg/nQFeEfVKjs">ITS22 A</a>
+            <a target="_blank" href="https://discord.gg/A847WKdhc9">ITS22 B</a>
+        {/if}
+
+        {#if programme.title === "Multimediedesign"}
+          <a target="_blank" href="https://discord.gg/9uFkVPdgQj">MMD22 A</a>
+          <a target="_blank" href="https://discord.gg/dXz4YgyYdG">MMD22 A</a>
+          <a target="_blank" href="https://discord.gg/pdPnA9mUHP">MMD22 A</a>
+        {/if}
+      </div>
     </div>
 
+
+    
     <div class="poem">
       <h2>Din pakkeliste</h2>
       <p>
@@ -149,12 +195,22 @@
   }
 
   .facebook,
-  .insta {
+  .insta{
     display: flex;
     align-items: center;
     text-decoration: none;
   }
-
+  .discord1 {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+  }
+  .discord2 {
+    display: flex;
+    /* align-items: center; */
+    flex-direction: column;
+    text-decoration: none;
+  }
   .poem {
     width: 90vw;
     margin: 0 1rem 2rem;
@@ -198,4 +254,11 @@
   .black-bg {
     background-color: black;
   }
+
+  .discord-icon {
+        max-width: 1.9em;
+        max-height: 1.9em;
+
+        border-radius: 5em;
+    }
 </style>
